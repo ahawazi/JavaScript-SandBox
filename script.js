@@ -38,3 +38,7 @@
 // roz = 6;
 // console.log(roz);
 
+//data type
+const age = "12";
+console.log(typeof age);
+
