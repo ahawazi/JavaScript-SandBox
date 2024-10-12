@@ -39,6 +39,35 @@
 // console.log(roz);
 
 //data type
-const age = "12";
-console.log(typeof age);
+// const age = "12";
+// console.log(typeof age);
+
+// // Strings
+// let x;
+
+// const firstName = 'alex';
+// const lastName = 'powel';
+
+// x = 'my name is' + firstName + ' ' + lastName;
+// // or
+// x = `my name is ${firstName} ${lastName}`;
+
+// console.log(x);
+
+
+// let b;
+
+// const s = "asanbash";
+
+// b = s.length;
+// b = s.charAt(2);
+// b = s.toLowerCase();
+// b = s.toUpperCase();
+// b = s.substring(0, 5);
+// b = s.trim();
+// b = s.replace('sh', 'io');
+// b = s.includes('sh');
+// b = s.split();
+// console.log(b);
+
 
