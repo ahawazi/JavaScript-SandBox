@@ -71,3 +71,18 @@
 // console.log(b);
 
 
+//array
+const arr =[1, 2, 3,];
+arr.push(10);
+arr.pop(10);
+arr.includes(2);
+arr.unshift(10);
+arr.shift(10);
+arr.reverse();
+arr.indexOf(3);
+arr.slice(1, 3);
+arr.splice(1, 3);
+console.log(arr);
+
+// listing & array in to in
+
