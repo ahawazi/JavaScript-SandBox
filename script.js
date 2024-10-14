@@ -126,3 +126,31 @@
 // console.log(x);
 
 
+//naming
+// const firstName = 'ali';
+// const lastName = 'sheri';
+// const age = 25;
+
+// const user = {
+    //when the key and valou is saim we can write the once.
+    //firstName: firstName,
+    //or :
+//     firstName,
+//     lastName,
+//     age,
+// }
+// console.log(user);
+
+
+const todo = {
+    id: 1,
+    title: 'todo1',
+    user: {
+        name: 'omid',
+    }
+}
+
+// const id = todo.id;
+//or
+const {id} = todo;
+console.log(id, title, user.name);
