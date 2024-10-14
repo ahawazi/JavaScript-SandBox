@@ -142,15 +142,26 @@
 // console.log(user);
 
 
-const todo = {
-    id: 1,
-    title: 'todo1',
-    user: {
-        name: 'omid',
-    }
-}
+// const todo = {
+//     id: 1,
+//     title: 'todo1',
+//     user: {
+//         name: 'omid',
+//     }
+// }
 
 // const id = todo.id;
 //or
-const {id} = todo;
-console.log(id, title, user.name);
+// const {id} = todo;
+
+// chenge the name id to todoId
+// const {id: todoId, title, user:{name} } = todo;
+
+// console.log(id, title, user.name);
+// console.log(id, title, user.name);
+// console.log(todoId, title, user.name);
+
+//for array
+// const numbers = [10, 22, 33, 44];
+// const [first, second, ...rest] = numbers;
+// console.log(first, second, rest);
