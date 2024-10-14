@@ -54,7 +54,6 @@
 
 // console.log(x);
 
-
 // let b;
 
 // const s = "asanbash";
@@ -70,7 +69,6 @@
 // b = s.split();
 // console.log(b);
 
-
 //array
 // const arr =[1, 2, 3,];
 // arr.push(10);
@@ -85,7 +83,6 @@
 // console.log(arr);
 
 // listing & array in to in
-
 
 //object
 // const persen = {
@@ -125,22 +122,20 @@
 // x = Object.hasOwnerProperty('name');
 // console.log(x);
 
-
 //naming
 // const firstName = 'ali';
 // const lastName = 'sheri';
 // const age = 25;
 
 // const user = {
-    //when the key and valou is saim we can write the once.
-    //firstName: firstName,
-    //or :
+//when the key and valou is saim we can write the once.
+//firstName: firstName,
+//or :
 //     firstName,
 //     lastName,
 //     age,
 // }
 // console.log(user);
-
 
 // const todo = {
 //     id: 1,
@@ -165,3 +160,33 @@
 // const numbers = [10, 22, 33, 44];
 // const [first, second, ...rest] = numbers;
 // console.log(first, second, rest);
+
+// JSON
+const post = [
+  {
+    id: 1,
+    title: "title",
+    body: "body",
+  },
+  {
+    id: 2,
+    title: "title",
+    body: "body",
+  },
+  {
+    id: 3,
+    title: "title",
+    body: "body",
+  },
+];
+// console.log(post);
+
+//convert object to JSON
+const str = JSON.stringify(post);
+
+console.log(str);
+
+//convert JSON to object
+const obj = JSON.parse(str)
+
+console.log(obj);
