@@ -162,57 +162,58 @@
 // console.log(first, second, rest);
 
 // JSON
-const post = [
-  {
-    id: 1,
-    title: "title",
-    body: "body",
-  },
-  {
-    id: 2,
-    title: "title",
-    body: "body",
-  },
-  {
-    id: 3,
-    title: "title",
-    body: "body",
-  },
-];
+// const post = [
+//   {
+//     id: 1,
+//     title: "title",
+//     body: "body",
+//   },
+//   {
+//     id: 2,
+//     title: "title",
+//     body: "body",
+//   },
+//   {
+//     id: 3,
+//     title: "title",
+//     body: "body",
+//   },
+// ];
 // console.log(post);
 
 //convert object to JSON
-const str = JSON.stringify(post);
+// const str = JSON.stringify(post);
 
-console.log(str);
+// console.log(str);
 
 //convert JSON to object
-const obj = JSON.parse(str)
+// const obj = JSON.parse(str)
 
-console.log(obj);
+// console.log(obj);
 
 
 //function
-function add(x, y, z = 10) {
-  return x + y + z; 
-}
-const resoult = add(5, 9, 9);
-console.log(resoult)
+// function add(x, y, z = 10) {
+//   return x + y + z; 
+// }
+// const resoult = add(5, 9, 9);
+// console.log(resoult)
 
 
 //function declaration
 //we can do this : 
 //console.log(add(5, 2));
-function add(x, y) {
-  return x + y;
-}
-console.log(add(5, 2));
+// function add(x, y) {
+//   return x + y;
+// }
+// console.log(add(5, 2));
 
 
 //function exprssion
 //we can't do this :
 //console.log(add2(3, 3));
-const add2 = function(x, y) {
-  return x = y;
-}
-console.log(add2(3, 3));
+// const add2 = function(x, y) {
+//   return x = y;
+// }
+// console.log(add2(3, 3));
+
