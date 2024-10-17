@@ -173,3 +173,20 @@
 //     default:
 //         console.log('not be there');
 // }
+
+
+//oop
+class Person {
+    constructor(firsname, lastname, age) {
+        this.firsname = firsname;
+        this.lastname = lastname;
+        this.age = age;
+    }
+
+    getFullName(){
+        return `${this.firsname} ${this.lastname}`
+    }
+}
+const student1 = new Person('reza', 'jak', 25);
+console.log(student1);
+console.log(student1.getFullName());
