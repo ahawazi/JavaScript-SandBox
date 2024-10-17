@@ -1,192 +1,72 @@
-// alert('hooooooooooooooooooo');
+// const form = document.getElementsByClassName('msg');
 
-//change the text in the html page:
-// document.getElementById('content').innerHTML="welcome";
+// const form = document.getElementById('my-form');
 
-//show the text in the end of html page:
-// document.write("heloo there");
+//querySelector select by find the first element
+//we can select all by querySelectorAll this find and select all things we tell this
+//selece by tag
+// const form = document.querySelector('div');
 
-//variables
-//var , let: we can change , const: this is not chenged
+//by id
+// const form = document.querySelector('#my-form');
 
-//datatype
-//primitive datatype
-//string, number(can be float), boolean, null(object), undifined
-
-//math
-// ++ one increaze
-// -- one decreaze
-
-//array
-// let number = new Array(1, 2, 3, 'c#', true);
-// let number2 = [4, 5, 6, 'c#', true];
-// console.log(number, number2);
-
-//seee the item in array
-// console.log(number[1]);
-
-//for shange the item
-// Number[1]= 'css';
-
-//push the end of the array
-// Number.push('tailwind');
-
-//push the first of the array:
-// Number.unshift('c++');
-
-//delete the from array
-// Number.pop();
-
-//object
-// const student = {
-//     name: 'ali',
-//     lastname: 'shiri',
-//     courses: [
-//         'flan',
-//         'folan',
-//         23,
-//         true
-//     ],
-//     adress: {
-//         country: 'onja',
-//         city: 'inja',
-//     }
-// }
-// console.log(student);
-
-// //add to object:
-// student.email = "example@ex.com"
-// console.log(student);
-
-//function
-// function log() {
-//     console.log("hahah");
-// }
-// log();
-
-// const log2 = () => {
-//     console.log("bye")
-// }
-// log2();
-
-// //parametr
-// function math(x, y) {
-//     return x*y
-// }
-// //argoument
-// let resoult = math(100, 4);
-// console.log(resoult);
-
-//arrow function
-//fat arrow
+//by class
+// const form = document.querySelector('.container')
 
 
-//array object
-// const courses = [
-//   {
-//     id: 1,
-//     name: "html",
-//     time: 10,
-//     iscompleted: true,
-//   },
-//   {
-//     id: 2,
-//     name: "css",
-//     time: 15,
-//     iscompleted: false,
-//   },
-// ];
-// console.log(courses[1].name);
-// const resoult = JSON.stringify(courses);
-// console.log(resoult);
+// const ul = document.querySelector(".items");
+//for delete first of item
+// ul.firstElementChild.remove();
 
+//for delete lastes
+// ul.lastElementChild.remove();
 
-//loop
-// for (let i = 0; i <= 10; i++) {
-//     console.log(i)
-// }
+//for change
+//can use the HTML tags
+// ul.children[0].innerHTML="<h2>changed</h2>"
+//give text
+// ul.children[0].innerText="<h2>changed</h2>"
 
-// let j= 0;
-// while (j<10) {
-//     console.log(`${j}`)
-//     j+=1
-// }
+// const btn = document.querySelector(".btn");
+//change style
+// btn.style.background="red"
 
-//hight order array methods
-//foreach, map, filter
-
-// const courses = [
-//   {
-//     id: 1,
-//     name: "html",
-//     time: 10,
-//     iscompleted: true,
-//   },
-//   {
-//     id: 2,
-//     name: "css",
-//     time: 15,
-//     iscompleted: false,
-//   },
-// ];
-
-// courses.forEach(function(c) {
-//     console.log(c)
+//event listener
+// btn.addEventListener("click", (e)=> {
+    //delete the default thing about this btn
+    // e.preventDefault();
+    // document.querySelector("#my-form").style.background="#ccc"
+    // document.querySelector("body").classList.add('bg-dark');
 // })
 
-// courses.map(function(cc) {
-//     return cc.name
-// })
 
-// const newCourses = courses.map(function(cc) {
-//     return { name: cc.name, Id: cc.id }
-// })
-// console.log(newCourses);
+const myform = document.querySelector("#my-form");
+const nameInput = document.querySelector("#name");
+const emailInput = document.querySelector("#email");
+const msg = document.querySelector(".msg");
+const users = document.querySelector("#users");
 
-// //we can filter the parametr and use the map in the our filters data
-// const newCourses2 = courses.filter(function(cc) {
-//     return cc.iscompleted === true
-// }).map(function(c) {
-//     return c.name
-// })
-// console.log(newCourses2);
+myform.addEventListener("submit", onSubmit)
 
+function onSubmit(e) {
+    e.preventDefault();
+    console.log(nameInput.value)
 
-// conditions
-//if, else, else if
+    if (nameInput.value === '' || emailInput.value === '' ) {
+        msg.innerHTML="<h5>please enter all filds</h5>"
+        msg.classList.add("error")
 
-//ternary operator
-// const x=10;
-// const color = x>10 ? 'red' : 'blue';
-// console.log(color);
-
-//switch
-// const color = 'blue'
-// switch (color) {
-//     case 'red':
-//         console.log("it is red");
-//         break;
-//     case 'blue':
-//         console.log("be blue");
-//         break;
-
-//     default:
-//         console.log('not be there');
-// }
-
-
-//oop
-class Person {
-    constructor(firsname, lastname, age) {
-        this.firsname = firsname;
-        this.lastname = lastname;
-        this.age = age;
-    }
-
-    getFullName(){
-        return `${this.firsname} ${this.lastname}`
+        setTimeout(()=> {
+            msg.innerHTML="";
+            msg.classList.remove("error")
+        }, 3000)
+    } else {
+        //add the value in li
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(nameInput.value + " : " + emailInput.value))
+        users.appendChild(li);
+        //decrease the value in inputs
+        nameInput.value='';
+        emailInput.value='';
     }
 }
-const student1 = new Person('reza', 'jak', 25);
-console.log(student1);
-console.log(student1.getFullName());
